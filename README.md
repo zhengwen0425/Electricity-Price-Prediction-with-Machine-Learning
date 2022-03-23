@@ -1,16 +1,14 @@
-### Hi there 👋
-
-<!--
-**zhengwen0425/zhengwen0425** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+8.4 Open the file romeo.txt and read it line by line. For each line, split the line into a list of words using the split() method. The program should build a list of words. For each word on each line check to see if the word is already in the list and if not append it to the list. When the program completes, sort and print the resulting words in alphabetical order.
+You can download the sample data at http://www.py4e.com/code3/romeo.txt
+fname = input("Enter file name: ")
+fh = open(fname)
+lst = list()
+for line in fh:
+    thing=line.rstrip().split()
+    for word in thing:
+        if word in lst:
+            continue
+        else:
+            lst.append(word)
+lst.sort()
+print(lst)
